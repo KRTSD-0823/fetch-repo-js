@@ -16,4 +16,5 @@ source=出力先のフォルダーのパス
 ```
 <span style="font-size: 12px;"><a href="https://qiita.com/YuukiYoshida/items/2e6b250d44bf1e0f5a0b">トークンの発行の方法</a> ※他の方の記事です</span>
   
-ターミナルで`npm run fetch`を実行すると、`.env`で`source`を指定した場合にはそのフォルダー、指定しなかった場合には`REPO`フォルダーに出力されます。
+ターミナルで`npm run fetch`を実行するか、ホスティングサービスの設定(大体Start Upという項目)から`fetch_git_repo.js`を実行するように変更してください。  
+成功すると、`.env`で`source`を指定した場合にはそのフォルダー、指定しなかった場合には`REPO`フォルダーに出力されます。
