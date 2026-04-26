@@ -1,0 +1,15 @@
+{
+  "name": "fetch_repo_js",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "fetch_git_repo.js",
+  "devDependencies": {
+    "dotenv": "^17.4.2"
+  },
+  "scripts": {
+    "fetch": "node fetch_git_repo.js"
+  }
+}
