@@ -78,7 +78,7 @@ function makeDir(...Paths) {
     const filePath = path.join(dirName, data.name);
 
     // 除外リストに載っているか確認
-    if (ignore.includes(filePath)) return;
+    if (ignore && ignore.includes(filePath)) return;
 
     // ファイルとディレクトリで処理を分ける
     if (data.type === "file") {
@@ -137,6 +137,11 @@ function makeDir(...Paths) {
 
       // 取得したデータに処理
       response.forEach((data) => clone(data, ignoreFiles, user_source));
+
+      return null;
     })
+    .then(() =>
+      console.log(`${owner}/${repo}` + (user_source ?`を${user_source}にコピー完了` : "のコピー完了"))
+    )
     .catch(error => console.error(error));
 }
